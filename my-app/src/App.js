@@ -1,14 +1,19 @@
 import React from 'react';
 import {
-  ChakraProvider, Stack, Skeleton, theme } from '@chakra-ui/react';
+  ChakraProvider, Flex, Stack, Skeleton, theme } from '@chakra-ui/react';
+import Buttons from './components/Header/buttons';
+import SearchBar from './components/NavBars/SearchBar/SearchBar';
 
 function App() {
   return (
     <ChakraProvider theme={theme}>
       <Stack>
-        <Skeleton height='20px' />
-        <Skeleton height='20px' />
-        <Skeleton height='20px' />
+          <Flex pl="1600px" pt="20px" >
+          <SearchBar/>
+          </Flex>
+          <Buttons />
+          <Skeleton height='800px' />
+        <Skeleton height='50px' />
       </Stack>
     </ChakraProvider>
   );
